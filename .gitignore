@@ -1,0 +1,7 @@
+.air.toml
+
+sample/
+tmp/
+images
+bin/
+build/

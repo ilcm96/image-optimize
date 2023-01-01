@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <link rel="stylesheet" href="./src/index.css" />
+    <link id="favicon" rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- js -->
+    <script type="text/javascript" src="./src/index.js" defer></script>
+
+    <title>image-optimize</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <header>
+          <h1>image-optimize</h1>
+        </header>
+      </section>
+      <section>
+        <form
+          id="file-form"
+          enctype="multipart/form-data"
+          method="post"
+          action="/optimize"
+          target="blankifr"
+        >
+          <header>
+            <h2>Upload image</h2>
+          </header>
+          <label for="input-file" id="label-file">JPG - PNG - GIF</label>
+          <input
+            id="input-file"
+            type="file"
+            name="file"
+            accept="image/png, image/jpeg, image/gif"
+          />
+          <div style="text-align: center">
+            <button id="file-submit" type="button">Upload</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script type="text/javascript">
+      document.getElementById("file-form").action = location.href + "optimize";
+      document.getElementById("favicon").href = location.href + "favicon.ico";
+    </script>
+  </body>
+  <iframe name="blankifr" style="display: none"></iframe>
+</html>

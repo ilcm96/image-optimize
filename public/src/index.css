@@ -1,0 +1,20 @@
+#label-file {
+  text-align: center;
+}
+
+form input {
+  text-align: center;
+  max-width: 250px;
+  margin: auto auto 1rem;
+}
+form input::-webkit-file-upload-button {
+  display: none;
+}
+
+form input::placeholder {
+  text-align: center;
+}
+
+form label {
+  margin-bottom: 1rem;
+}
